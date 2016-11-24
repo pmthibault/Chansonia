@@ -3,20 +3,16 @@
 
 #include <QMainWindow>
 
-namespace Ui {
-class FenetrePrincipale;
-}
-
 class FenetrePrincipale : public QMainWindow
 {
     Q_OBJECT
     
 public:
-    explicit FenetrePrincipale(QWidget *parent = 0);
+    FenetrePrincipale(QWidget *parent = 0);
     ~FenetrePrincipale();
     
 private:
-    Ui::FenetrePrincipale *ui;
+    void setMonStyle();
 };
 
 #endif // FENETREPRINCIPALE_H

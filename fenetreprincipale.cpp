@@ -1,14 +1,27 @@
+#include <QPainter.h>
+#include <qstyleoption.h>
 #include "fenetreprincipale.h"
-#include "ui_fenetreprincipale.h"
 
 FenetrePrincipale::FenetrePrincipale(QWidget *parent) :
-    QMainWindow(parent),
-    ui(new Ui::FenetrePrincipale)
+    QMainWindow(parent)
 {
-    ui->setupUi(this);
+    this->setObjectName("fenetre_principale");
+    this->setMonStyle();
 }
 
 FenetrePrincipale::~FenetrePrincipale()
 {
-    delete ui;
+    delete this;
+}
+
+void FenetrePrincipale::setMonStyle()
+{
+    QString str(
+        "#fenetre_principale {"
+                "background: rgb(26, 26, 26);"
+        "}"
+    );
+
+    this->setStyleSheet(str);
+
 }
